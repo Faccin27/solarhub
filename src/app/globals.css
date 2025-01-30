@@ -5,6 +5,9 @@
 :root {
   --background: #000000;
   --foreground: #ededed;
+  --primary: #18181b;
+  --secondary: #ad6d0d4b;
+  --tertiary: #ad6d0dbb;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +21,20 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+*::-webkit-scrollbar {
+  width: 17px;
+  background-color: #18181b ;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 6px;
+  border: 3px solid var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
 }
