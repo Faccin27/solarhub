@@ -1,7 +1,7 @@
+import background from '@/assets/background.jpg';
 import { ChevronDown } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
-import background from '@/assets/background.jpg'
+import Link from "next/link";
 
 export default function Hero() {
   return (

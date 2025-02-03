@@ -1,23 +1,19 @@
 "use client"
 
 import {
-  Crosshair,
-  Palette,
-  MousePointer,
   ArrowUp,
-  Settings,
+  Crosshair,
   Eye,
-  Monitor,
-  Save,
-  Video,
-  Users,
-  Box,
-  Skull,
-  Clock,
-  Bell,
-  Shield,
-  Zap,
   Layers,
+  Monitor,
+  MousePointer,
+  Palette,
+  Save,
+  Settings,
+  Shield,
+  Users,
+  Video,
+  Zap
 } from "lucide-react"
 
 import type React from "react"

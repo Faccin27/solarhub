@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { CheckCircle, XCircle } from "lucide-react";
 import PlanSelector from "@/components/PlanSelector"; //This line is removed as per update 1
+import { CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 type ProductType = {
   name: string;

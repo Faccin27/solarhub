@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
+import SolarLogo from '@/assets/solar.png';
 import { useHeader } from "@/hooks/useHeader";
-import SolarLogo from '@/assets/solar.png'
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useHeader();

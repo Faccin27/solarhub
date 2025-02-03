@@ -1,8 +1,8 @@
 "use client"
 
-import { FaDiscord, FaYoutube, FaTiktok } from "react-icons/fa";
-import Image from "next/image"
-import logo from '@/assets/solar.png'
+import logo from '@/assets/solar.png';
+import Image from "next/image";
+import { FaDiscord, FaTiktok, FaYoutube } from "react-icons/fa";
 
 export default function ProfileSection() {
   return (
