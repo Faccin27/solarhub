@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Reparatech",
-  description: "A sua loja de reparos tecnologicos.",
+  title: "Solarhub",
+  description: "O seu melhor amigo no valorant.",
 };
 
 export default function RootLayout({
