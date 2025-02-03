@@ -7,7 +7,7 @@ import logo from '@/assets/solar.png'
 export default function ProfileSection() {
   return (
 
-    <div className="relative h-[70vh] sm:h-[80vh] md:h-[70vh] w-[90%] sm:w-[95%] max-w-7xl rounded-xl mx-auto flex flex-col justify-between mt-24">
+    <div className="relative h-[95vh] sm:h-[90vh] md:h-[50vh] w-[90%] sm:w-[95%] max-w-7xl rounded-xl mx-auto flex flex-col justify-between mt-24">
 
       <div className="bg-zinc-900/55 text-white rounded-xl p-8 border-t-orange-400 border-t-4">
         <div className="flex flex-col items-center relative">
