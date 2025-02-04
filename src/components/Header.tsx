@@ -7,6 +7,16 @@ import Link from "next/link";
 
 export default function Header() {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useHeader();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Fecha o menu mobile após clicar
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <div className="w-full fixed top-0 left-0 px-4 pt-4 z-50">
       <header className="bg-[#121212] text-white px-4 py-3 rounded-2xl shadow-lg max-w-7xl mx-auto backdrop-blur-sm bg-opacity-90">
@@ -18,35 +28,35 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link
-              href="/"
+            <button
+              onClick={() => scrollToSection('hero')}
               className="text-gray-300 hover:text-white transition-colors"
             >
               Início
-            </Link>
-            <Link
-              href="/chat"
+            </button>
+            <button
+              onClick={() => scrollToSection('products')}
               className="text-gray-300 hover:text-white transition-colors"
             >
               Produtos
-            </Link>
-            <Link
-              href="/agendamento"
+            </button>
+            <button
+              onClick={() => scrollToSection('showcase')}
               className="text-gray-300 hover:text-white transition-colors"
             >
               Showcases
-            </Link>
-            <Link
-              href="/contato"
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
               className="text-gray-300 hover:text-white transition-colors"
             >
               Contato
-            </Link>
+            </button>
           </nav>
 
           {/* Contact Button */}
-          <Link
-            href="/contato"
+          <button
+            onClick={() => scrollToSection('contact')}
             className="hidden md:flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"
           >
             Fale Conosco
@@ -62,7 +72,7 @@ export default function Header() {
             >
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </Link>
+          </button>
 
           {/* Mobile Menu Button */}
           <button
@@ -91,39 +101,39 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden pt-4 pb-3 px-4 space-y-3 mt-4 border-t border-gray-800">
-            <Link
-              href="/"
-              className="block text-gray-300 hover:text-white transition-colors"
+            <button
+              onClick={() => scrollToSection('hero')}
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors"
             >
               Início
-            </Link>
-            <Link
-              href="/chat"
-              className="block text-gray-300 hover:text-white transition-colors"
+            </button>
+            <button
+              onClick={() => scrollToSection('products')}
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors"
             >
-              Produtos{" "}
-            </Link>
-            <Link
-              href="/contato"
-              className="block text-gray-300 hover:text-white transition-colors"
+              Produtos
+            </button>
+            <button
+              onClick={() => scrollToSection('showcase')}
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors"
             >
-              Showcases{" "}
-            </Link>
-            <Link
-              href="/agendamento"
-              className="block text-gray-300 hover:text-white transition-colors"
+              Showcases
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors"
             >
-              Agendamento
-            </Link>
-            <Link
-              href="/contato"
-              className="block bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors text-center mt-4"
+              Contato
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="block w-full bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors text-center mt-4"
             >
               Fale Conosco
-            </Link>
+            </button>
           </div>
         )}
       </header>
     </div>
   );
-}
+} 
