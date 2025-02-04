@@ -108,9 +108,7 @@ export default function ProductPricing() {
 
   return (
     <div className="w-[90%] sm:w-[95%] max-w-7xl mx-auto my-20">
-      <h2 className="text-3xl font-bold text-white mb-16 text-center">
-        Nossos Produtos
-      </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {products.map((product) => (
           <div

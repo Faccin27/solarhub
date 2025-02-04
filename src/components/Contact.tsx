@@ -64,7 +64,7 @@ export default function ProfileSection() {
       <button
         onClick={() => window.open("https://tiktok.com/@solarhub", "_blank")}
         className="group flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg
-          bg-gradient-to-r from-black via-[#2cabff6b] to-black
+           bg-black 
           hover:shadow-lg hover:shadow-blue-400/30
           active:scale-95
           transform transition-all duration-300 ease-in-out"
