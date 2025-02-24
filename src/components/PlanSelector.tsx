@@ -1,18 +1,17 @@
 import type React from "react"
 
-type PlanType = "Diario" | "Semanal" | "Mensal"
+type PlanType = "Diario" | "Trial" | "Semanal" | "Mensal" | "Lifetime"
 
 interface PlanSelectorProps {
   selectedPlan: PlanType
   onChange: (plan: PlanType) => void
+  availablePlans: PlanType[]
 }
 
-const PlanSelector: React.FC<PlanSelectorProps> = ({ selectedPlan, onChange }) => {
-  const plans: PlanType[] = ["Diario", "Semanal", "Mensal"]
-
+const PlanSelector: React.FC<PlanSelectorProps> = ({ selectedPlan, onChange, availablePlans }) => {
   return (
-    <div className="flex bg-zinc-800 rounded overflow-hidden">
-      {plans.map((plan) => (
+    <div className="flex flex-wrap bg-zinc-800 rounded overflow-hidden">
+      {availablePlans.map((plan) => (
         <button
           key={plan}
           onClick={() => onChange(plan)}
@@ -28,4 +27,3 @@ const PlanSelector: React.FC<PlanSelectorProps> = ({ selectedPlan, onChange }) =
 }
 
 export default PlanSelector
-
