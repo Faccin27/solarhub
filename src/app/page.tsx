@@ -17,7 +17,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   animation,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <motion.div
@@ -88,7 +88,7 @@ export default function Home() {
       <AnimatedSection animation={slideInLeft}>
         <Showcase />
         <h2
-          className="text-3xl font-bold text-white mb-12 text-center mt-16"
+          className="text-3xl font-bold text-white mb-12 text-center"
           id="contact"
         ></h2>
       </AnimatedSection>
