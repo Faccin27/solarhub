@@ -24,6 +24,7 @@ export default function VideoShowcase() {
       icon: Crosshair,
       title: "AIMBOT",
       description: "Features como Smooth Humanized, FOV X & Y, e muito mais para um aimbot personalizado",
+      videoUrl: "https://www.youtube.com/embed/Zm3OEfb9dWY?start=0&autoplay=0&mute=1"
     },
     {
       icon: Palette,
@@ -67,6 +68,7 @@ export default function VideoShowcase() {
       icon: Users,
       title: "Player ESP",
       description: "Visualize jogadores através de paredes e obstáculos",
+      videoUrl: "https://www.youtube.com/embed/vZ7jt95FYFc?autoplay=0&mute=1"
     },
     {
       icon: Crosshair,
@@ -117,10 +119,15 @@ function ProductSection({ title, features, videoOnLeft }: { title: string; featu
   return (
     <div className={`grid lg:grid-cols-2 mt-12 gap-8 ${videoOnLeft ? "" : "lg:grid-flow-col"}`}>
       <div className={videoOnLeft ? "mb-24" : "lg:order-last"}>
-        <div className="relative aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-4">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <Video className="w-12 h-12 text-zinc-600" />
-          </div>
+        <div className="relative aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-4 group">
+          {features[0].videoUrl && (
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={features[0].videoUrl}
+              title="Feature Video"
+              allowFullScreen
+            ></iframe>
+          )}
         </div>
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">{title}</h2>
@@ -129,8 +136,6 @@ function ProductSection({ title, features, videoOnLeft }: { title: string; featu
           </button>
         </div>
       </div>
-
-      {/* Features list */}
       <div className="space-y-6">
         <h3 className="text-xl font-semibold mb-4">Key Features</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -143,15 +148,7 @@ function ProductSection({ title, features, videoOnLeft }: { title: string; featu
   )
 }
 
-function FeatureItem({
-  icon: Icon,
-  title,
-  description,
-}: {
-  icon: React.ElementType
-  title: string
-  description: string
-}) {
+function FeatureItem({ icon: Icon, title, description }: { icon: React.ElementType; title: string; description: string }) {
   return (
     <div className="flex items-start gap-4">
       <div className="p-2 rounded-lg bg-zinc-800 flex-shrink-0">
@@ -164,4 +161,3 @@ function FeatureItem({
     </div>
   )
 }
-
