@@ -11,7 +11,6 @@ export default function ProfileSection() {
 
       <div className="bg-zinc-900/55 text-white rounded-xl p-8 border-t-orange-400 border-t-4">
         <div className="flex flex-col items-center relative">
-          {/* Profile Image */}
           <div className="w-24 h-24 rounded-full overflow-hidden relative mb-4">
             <Image
               src={logo}
@@ -22,7 +21,6 @@ export default function ProfileSection() {
             />
           </div>
 
-          {/* Description */}
           <p className="text-center text-zinc-300 mb-8 max-w-3xl">
             Bem-vindo à SolarHub, sua loja premium de produtos para Valorant! Oferecemos uma seleção exclusiva de skins,
             pacotes e acessórios para elevar sua experiência de jogo a outro nível. Nossa plataforma foi desenvolvida
@@ -31,7 +29,6 @@ export default function ProfileSection() {
             partidas!
           </p>
 
-          {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-6">
       <button
         onClick={() => window.open("https://discord.gg/solarhub", "_blank")}

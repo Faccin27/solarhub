@@ -1,6 +1,6 @@
 "use client";
 
-import PlanSelector from "@/components/PlanSelector"; //This line is removed as per update 1
+import PlanSelector from "@/components/PlanSelector";
 import { CheckCircle } from "lucide-react";
 import { useState } from "react";
 
@@ -31,9 +31,9 @@ const products: ProductType[] = [
       "Personalização avançada",
     ],
     prices: {
-      Diario: "R$ 10,00",
+      Diario: "R$ 25,00",
       Semanal: "R$ 50,00",
-      Mensal: "R$ 150,00",
+      Mensal: "R$ 100,00",
     },
   },
   {
@@ -48,9 +48,9 @@ const products: ProductType[] = [
       "Alertas sonoros",
     ],
     prices: {
-      Diario: "R$ 15,00",
-      Semanal: "R$ 75,00",
-      Mensal: "R$ 225,00",
+      Diario: "R$ 60,00", // ESP é trial, semanal e mensal, não tem diario.
+      Semanal: "R$ 120,00",
+      Mensal: "R$ 200,00",
     },
   },
   {
@@ -65,9 +65,9 @@ const products: ProductType[] = [
       "Modo stealth",
     ],
     prices: {
-      Diario: "R$ 20,00",
-      Semanal: "R$ 100,00",
-      Mensal: "R$ 300,00",
+      Diario: "R$ 50,00",
+      Semanal: "N/A", // remover o semanal do spoofer
+      Mensal: "R$ 150,00", // adicionar lifetime (350)
     },
   },
   {
@@ -82,9 +82,9 @@ const products: ProductType[] = [
       "Previsualização de skins",
     ],
     prices: {
-      Diario: "R$ 25,00",
-      Semanal: "R$ 125,00",
-      Mensal: "R$ 375,00",
+      Diario: "R$ 15,00",
+      Semanal: "R$ 40,00",
+      Mensal: "R$ 80,00", //adicionar lifetime (200 rs)
     },
   },
 ];
@@ -139,9 +139,7 @@ export default function ProductPricing() {
               <p className="text-gray-400 mb-4 text-sm">
                 {product.description}
               </p>
-              {/* This div and its contents are replaced as per update 2 */}
               <div className="mb-4">
-                {/* PlanSelector is now imported and used here */}
                 <PlanSelector
                   selectedPlan={selectedPlans[product.name]}
                   onChange={(newPlan) =>

@@ -13,7 +13,6 @@ export default function Header() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    // Fecha o menu mobile após clicar
     setIsMobileMenuOpen(false);
   };
 
@@ -26,7 +25,6 @@ export default function Header() {
             SolarHub
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('hero')}
@@ -54,7 +52,6 @@ export default function Header() {
             </button>
           </nav>
 
-          {/* Contact Button */}
           <button
             onClick={() => scrollToSection('contact')}
             className="hidden md:flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"
@@ -74,7 +71,6 @@ export default function Header() {
             </svg>
           </button>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -98,7 +94,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden pt-4 pb-3 px-4 space-y-3 mt-4 border-t border-gray-800">
             <button
